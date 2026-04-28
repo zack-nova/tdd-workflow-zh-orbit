@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review 提交技术债"
+  short_description: "默认 review、提交并记录技术债"
+  default_prompt: "使用 $review-commit-debt review 我的改动，修复可直接处理的问题，提交安全代码，并把技术债记录到专门 issue。"

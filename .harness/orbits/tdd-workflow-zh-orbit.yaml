@@ -1,0 +1,51 @@
+package:
+    type: orbit
+    name: tdd-workflow-zh-orbit
+name: 轻量tdd开发工作流
+description: 轻量 TDD、review、提交与技术债工作流
+meta:
+    file: .harness/orbits/tdd-workflow-zh-orbit.yaml
+    agents_template: |
+        # 轻量tdd开发工作流
+
+        实现用 `$tdd-development`，review/提交用 `$review-commit-debt`。开发审计草稿放 `.development-audit/`；未解决技术债记录到专门的技术债 issue。
+    humans_template: |
+        使用 `$tdd-development` 进行开发。
+        使用 `$review-commit-debt` 进行 review、验证、提交，并把遗留技术债记录到专门 issue。
+    bootstrap_template: |
+        将 `.development-audit/` 目录加入 `.gitignore` 中。
+    include_in_projection: true
+    include_in_write: true
+    include_in_export: true
+    include_description_in_orchestration: true
+capabilities:
+    commands:
+        paths:
+            include:
+                - commands/tdd-workflow-zh-orbit/**/*.md
+    skills:
+        local:
+            paths:
+                include:
+                    - skills/tdd-workflow-zh-orbit/*
+behavior:
+    scope:
+        projection_roles:
+            - meta
+            - subject
+            - rule
+            - process
+        write_roles:
+            - meta
+            - rule
+        export_roles:
+            - meta
+            - rule
+        orchestration_roles:
+            - meta
+            - rule
+            - process
+    orchestration:
+        include_orbit_description: true
+        materialize_agents_from_meta: true
+
