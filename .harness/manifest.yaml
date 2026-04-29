@@ -1,0 +1,13 @@
+schema_version: 1
+kind: orbit_template
+template:
+    orbit_id: tdd-workflow-zh-orbit
+    default_template: false
+    created_from_branch: main
+    created_from_commit: 44529e5532037858eb277bb598549bb1756a3124
+    created_at: 2026-04-29T00:29:39Z
+variables:
+    review:
+        required: true
+    tdd:
+        required: true

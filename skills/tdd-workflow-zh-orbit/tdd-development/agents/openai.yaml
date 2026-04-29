@@ -1,0 +1,4 @@
+interface:
+  display_name: "TDD 开发"
+  short_description: "指导测试先行实现"
+  default_prompt: "使用 $tdd-development 按 Red-Green-Refactor 实现这个改动。"
